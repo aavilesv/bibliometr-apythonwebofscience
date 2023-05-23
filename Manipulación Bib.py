@@ -31,7 +31,7 @@ for clave, entrada in bib_data.entries.items():
   
 
 # Guarda los cambios en el archivo .bib
-bib_data.to_file(archivo_bib, bib_format='bibtex')
+#bib_data.to_file(archivo_bib, bib_format='bibtex')
 with open(archivo_bib, 'w', encoding='utf-8') as archivo:
-    archivo.write(bib_data.to_file(archivo_bib, bib_format='bibtex'))
+    archivo.write(bib_data.to_string('bibtex'))
 print('Los cambios se han guardado en el archivo .bib.')
