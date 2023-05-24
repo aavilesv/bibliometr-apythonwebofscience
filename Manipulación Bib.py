@@ -4,7 +4,7 @@ Created on Wed May 10 14:16:47 2023
 
 @author: AAVILESV
 """
-
+#pip install pybtex
 from pybtex.database import parse_file
 archivo_bib = 'C:\Investigación\Trabajo_2023\Codificaciones/unido.bib'
 # Parsear el archivo .bib
