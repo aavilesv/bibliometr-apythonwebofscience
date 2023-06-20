@@ -26,7 +26,7 @@ for clave, entrada in bib_data.entries.items():
    if 'Keywords' in entrada.fields and 'Keywords-Plus' in entrada.fields:
         keywords = entrada.fields['Keywords']
         keywords_plus = entrada.fields['Keywords-Plus']
-        entrada.fields['Keywords-Plus'] = keywords+"; "+keywords_plus
+        entrada.fields['Keywords-Plus']  = keywords.capitalize()+"; "+keywords_plus.capitalize()
         #del entrada.fields['Keywords']
   
 
