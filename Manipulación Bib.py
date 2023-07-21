@@ -6,7 +6,7 @@ Created on Wed May 10 14:16:47 2023
 """
 
 from pybtex.database import parse_file
-archivo_bib = 'C:\Investigación\Trabajo_2023\Codificaciones/unido.bib'
+archivo_bib = 'C:\Investigación\Trabajo_2023\Codificaciones/wos580.bib'
 # Parsear el archivo .bib
 bib_data = parse_file(archivo_bib)
 # Obtener las entradas de tipo "article" o "articulo"
@@ -26,7 +26,7 @@ for clave, entrada in bib_data.entries.items():
    if 'Keywords' in entrada.fields and 'Keywords-Plus' in entrada.fields:
         keywords = entrada.fields['Keywords']
         keywords_plus = entrada.fields['Keywords-Plus']
-        entrada.fields['Keywords-Plus'] = keywords+"; "+keywords_plus
+        entrada.fields['Keywords-Plus'] = keywords.lower()+"; "+keywords_plus.lower()
         #del entrada.fields['Keywords']
   
 
