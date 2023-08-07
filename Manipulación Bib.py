@@ -4,7 +4,7 @@ Created on Wed May 10 14:16:47 2023
 
 @author: AAVILESV
 """
-
+#pip install pybtex
 from pybtex.database import parse_file
 
 try:
@@ -19,6 +19,7 @@ try:
         # Reemplaza los caracteres no deseados
         contenido = contenido.replace('\x05', '')  # Reemplaza '\x05' con el carácter no deseado
 
+<<<<<<< HEAD
         with open(archivo_bib, 'w', encoding='utf-8') as f:
             f.write(contenido)
 
@@ -38,3 +39,21 @@ try:
     print('Los cambios se han guardado en el archivo .bib.')
 except Exception as e:
     print(f"Error al analizar el archivo {archivo_bib}: {e}")
+=======
+limpiar_caracteres(archivo_bib)
+for clave, entrada in bib_data.entries.items():
+  
+   if 'Keywords' in entrada.fields and 'Keywords-Plus' in entrada.fields:
+        keywords = entrada.fields['Keywords']
+        keywords_plus = entrada.fields['Keywords-Plus']
+        entrada.fields['Keywords-Plus']  = keywords.capitalize()+"; "+keywords_plus.capitalize()
+        #del entrada.fields['Keywords']
+  
+
+# Guarda los cambios en el archivo .bib
+#bib_data.to_file(archivo_bib, bib_format='bibtex')
+with open(archivo_bib, 'w', encoding='utf-8') as archivo:
+    archivo.write(bib_data.to_string('bibtex'))
+print('Los cambios se han guardado en el archivo .bib.')
+
+>>>>>>> ef45a2ab47c0e0cfc068495f029c5d43adf7751a
