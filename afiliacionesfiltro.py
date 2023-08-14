@@ -28,18 +28,29 @@ words_to_searchprivadas = ["Milagro"]
 # Buscar filas donde 'affiliations' termina con alguna de las palabras en words_to_search
 #df_ends_with = df_wos[df_wos['affiliations'].str.endswith(tuple(words_to_search))]
 words_to_searchpublicas = [("UNIVERSIDAD","YACHAY","TECH"),("UNIVERSIDAD","TECNICA","AMBATO"),("UNIVERSIDAD","ESTATAL","AMAZONICA ")
-                           ,("UNIVERSIDAD","ESTATAL","ELENA"),("UNIVERSIDAD","YACHAY","TECH")
-                            ,("UNIVERSIDAD","YACHAY","TECH")
-                             ,("UNIVERSIDAD","YACHAY","TECH")
-                              ,("UNIVERSIDAD","YACHAY","TECH")
-                               ,("UNIVERSIDAD","YACHAY","TECH")
-                                ,("UNIVERSIDAD","YACHAY","TECH") ("Universidad", "Ambato"), ("UNIVERSIDAD", "ELENA")
-                                ,("UNIVERSIDAD","YACHAY","TECH")
-                                ,("UNIVERSIDAD","YACHAY","TECH")
-                                ,("UNIVERSIDAD","YACHAY","TECH")
-                                ,("UNIVERSIDAD","YACHAY","TECH")
-                                ,("UNIVERSIDAD","YACHAY","TECH")
-                                ,("UNIVERSIDAD","YACHAY","TECH")]
+                           ,("UNIVERSIDAD","ESTATAL","ELENA"),("ESCUELA","POLITECNICA ","EJERCITO ")
+                           ,("ESCUELA","POLITECNICA ","NACIONAL")
+                            ,("FACULTAD","LATINOAMERICANA","CIENCIAS")
+                             ,("UNIVERSIDAD","DE","QUITO")
+                              ,("INSTITUTO","ALTOS","NACIONALES")
+                               ,("UNIVERSIDAD","ANDINA","BOLIVAR")
+                                ,("UNIVERSIDAD","ESTATAL","AMAZONICA")
+                                ,("UNIVERSIDAD","AGRARIA","ECUADOR")
+                                ,("UNIVERSIDAD","TECNICA","ESMERALDAS")
+                                ,("UNIVERSIDAD","REGIONAL","AMAZONICA")
+                                ,("ESCUELA","POLITECNICA","MANABI")
+,("UNIVERSIDAD","ESTATAL","MANABI"),("UNIVERSIDAD","CENTRAL","ECUADOR")
+,("UNIVERSIDAD","LAICA","MANABI")
+,("UNIVERSIDAD","TECNICA","MANABI")
+,("UNIVERSIDAD","NACIONAL","LOJA")
+,("UNIVERSIDAD","TECNICA","BABAHOYO")
+,("UNIVERSIDAD","TECNICA","QUEVEDO")
+,("ESCUELA","SUPERIOR","LITORAL")
+,("UNIVERSIDAD","AGRARIA","ECUADOR")
+,("UNIVERSIDAD","LAICA","MANABI")
+,("UNIVERSIDAD","TECNICA","MANABI")
+,("UNIVERSIDAD","NACIONAL","LOJA")]
+
 words_to_searchprivadas = [("UNIVERSIDAD", "YACHAY"), ("Universidad", "Ambato")]  # Continúa con el resto de las combinaciones
 # Inicialmente, asumimos que ninguna fila es válida
 mask = pd.Series([False] * len(df_wos))
