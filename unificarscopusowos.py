@@ -49,5 +49,4 @@ revistadoi.to_csv('unicosfinal.csv', index=False)
 # Imprimir la cantidad de registros en cada DataFrame
 print("Cantidad de registros repetidos title(sin incluir la primera aparición):", len(df_repetidostitle))
 print("Cantidad de registros repetidos revista(sin incluir la primera aparición):", len(df_repetidosrevista))
-print("Cantidad de registros únicos (incluyendo la primera aparición de valores duplicados):", len(df_unido))
 print("Cantidad de TOTAL (incluyendo la primera aparición de valores duplicados):", len(revistadoi))
