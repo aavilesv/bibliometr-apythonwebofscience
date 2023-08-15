@@ -44,8 +44,15 @@ df_unido = df_unido.drop_duplicates(subset=['Title'], keep='first').sort_values(
 repetidos_mask = df_unido.duplicated(subset=['Year','Source title','DOI'], keep='first')
 df_repetidosrevista = df_unido[repetidos_mask].sort_values(by='Title')
 revistadoi = df_unido.drop_duplicates(subset=['Year','Source title','DOI'], keep='first').sort_values(by='Title')
-
-revistadoi.to_csv('unicosfinal.csv', index=False)
+# Obtener el número total de revistas únicas
+total_unique_journals = revistadoi['Source title'].nunique()
+# Obtener el número total de registros en el archivo
+total_records = len(revistadoi)
+print(f"Total de revistas únicas: {total_unique_journals}")
+print(f"Total de registros en el archivo: {total_records}")
+#guardar los registros
+revistadoi.to_csv('registrofinal.csv', index=False)
+#revistadoi.to_csv('registrofinal.csv', index=False)
 # Imprimir la cantidad de registros en cada DataFrame
 print("Cantidad de registros repetidos title(sin incluir la primera aparición):", len(df_repetidostitle))
 print("Cantidad de registros repetidos revista(sin incluir la primera aparición):", len(df_repetidosrevista))
