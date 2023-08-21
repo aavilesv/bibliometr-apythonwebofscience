@@ -1,6 +1,6 @@
 import bibtexparser
 
-archivo_bib = 'C:\\Investigación\\Trabajo_2023\\Codificaciones\\archivo_unic.bib'
+archivo_bib = 'C:\\Investigación\\Trabajo_2023\\Codificaciones\\archivo_24502.bib'
 
 with open(archivo_bib, 'r', encoding='utf-8') as archivo:
     bib_database = bibtexparser.load(archivo)
