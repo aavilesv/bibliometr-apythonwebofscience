@@ -8,13 +8,11 @@ df_wos_original = df_wos.copy()
 
 
 variants = [
-'UNIV OTAVALO ECUADOR',
-'UNIV OTAVALO IMBABURA',
-'UNIV OTAVALO',
+'Univ Amer'
 ]
 
 
-standard_name = 'UNIVERSIDAD DE OTAVALO'
+standard_name = 'UNIVERSIDAD DE LAS AMERICAS'
 
 # Función de reemplazo actualizada
 
