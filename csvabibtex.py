@@ -1,8 +1,9 @@
 import csv
 from bibtexparser.bibdatabase import BibDatabase
 
-archivo_csv = 'C:\\Investigación\\Trabajo_2023\\Codificaciones\\archivocsvfinal.csv'
-archivo_bib = 'C:\\Investigación\\Trabajo_2023\\Codificaciones\\archivofinal.bib'
+archivo_csv = 'C:\\Investigación\\Trabajo_2023\Codificaciones\\archivo_unidoprivadaspublicas.csv'
+archivo_bib = 'C:\\Investigación\\Trabajo_2023\Codificaciones\\archivofinalprivadas.bib'
+               
 
 # Leer el archivo CSV
 entradas = []
