@@ -1,8 +1,8 @@
 import bibtexparser
 import csv
 
-archivo_bib = 'C:\\Investigación\\Trabajo_2023\\Codificaciones\\archivo_24502.bib'
-archivo_csv = 'C:\\Investigación\\Trabajo_2023\\Codificaciones\\finalbib.csv'
+archivo_bib = 'C:\\Investigación\\Trabajo_2023\\Msc. Isabel Leal\\Búsqueda 1\\bibliometriascopusnew1.bib'
+archivo_csv = 'C:\\Investigación\\Trabajo_2023\\Msc. Isabel Leal\\Búsqueda 1\\bibliometriascopusnew1csv.csv'
 
 with open(archivo_bib, 'r', encoding='utf-8') as archivo:
     bib_database = bibtexparser.load(archivo)

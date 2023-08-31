@@ -8,7 +8,8 @@ Created on Wed May 10 14:16:47 2023
 from pybtex.database import parse_file
 
 try:
-    archivo_bib = 'C:\Investigación\Trabajo_2023\Codificaciones/archisvo_unic.bib'
+    
+    archivo_bib = 'C:\\Investigación\\Trabajo_2023\\Msc. Isabel Leal\\Búsqueda 1\\bibliometriascopusnew1.bib'
     # Parsear el archivo .bib
     bib_data = parse_file(archivo_bib)
     # Obtener las entradas de tipo "article" o "articulo"
@@ -25,10 +26,10 @@ try:
 
     limpiar_caracteres(archivo_bib)
     for clave, entrada in bib_data.entries.items():
-            if 'Keywords' in entrada.fields and 'Keywords-Plus' in entrada.fields:
-                keywords = entrada.fields['Keywords']
-                keywords_plus = entrada.fields['Keywords-Plus']
-                entrada.fields['Keywords-Plus'] = keywords.lower()+"; "+keywords_plus.lower()
+            if 'author_keywords' in entrada.fields and 'keywords' in entrada.fields:
+                keywords = entrada.fields['author_keywords']
+                keywords_plus = entrada.fields['keywords']
+                entrada.fields['keywords'] = keywords.lower()+"; "+keywords_plus.lower()
                 #del entrada.fields['Keywords']
         
 
