@@ -2,8 +2,8 @@ import openpyxl
 from bibtexparser.bibdatabase import BibDatabase
 from bibtexparser import dump
 
-archivo_excel = 'C:\\Investigación\\Trabajo_2023\\Codificaciones\\archivo_unidoprivadaspublicas.xlsx'
-archivo_bib = 'C:\\Investigación\\Trabajo_2023\\Codificaciones\\archivofinalprivadas.bib'
+archivo_excel = 'C:\\Investigación\\Trabajo_2023\\Codificaciones\\universidades_latinoamerica.xlsx'
+archivo_bib = 'C:\\Investigación\\Trabajo_2023\\Codificaciones\\universidades_latinoamericabib.bib'
 
 # Leer el archivo Excel
 entradas = []
