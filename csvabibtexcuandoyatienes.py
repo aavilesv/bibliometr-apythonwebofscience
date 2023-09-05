@@ -2,10 +2,7 @@ import csv
 from bibtexparser.bibdatabase import BibDatabase
 #esto sirve siempre y cuando hayas convertido primero a csv y luego a bib
 archivo_csv = 'C:\\Investigación\\Trabajo_2023\\Msc. Isabel Leal\\Búsqueda 1\\finalbibliometriascopus.csv'
-
-archivo_bib = 'C:\\Investigación\\Trabajo_2023\Codificaciones\\finalbibliometricoscopus.bib'
-               
-
+archivo_bib = 'C:\\Investigación\\Trabajo_2023\Codificaciones\\finalbibliometricoscopus.bib'     
 # Leer el archivo CSV
 entradas = []
 with open(archivo_csv, 'r', encoding='utf-8') as archivo:
