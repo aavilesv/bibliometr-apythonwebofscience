@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 # Cargar los archivos
-df_wos = pd.read_excel('C:\\Investigación\\Trabajo_2023\\Codificaciones\\488_savedrecs.xlsx')
+df_wos = pd.read_excel('C:\\Investigación\\Trabajo_2023\\Codificaciones\\data.xlsx')
 
 # Lista de afiliaciones para buscar
 affiliations_to_search = [

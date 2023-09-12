@@ -3,7 +3,7 @@ import pandas as pd
 
 # Constantes
 RUTA_ARCHIVO_SCOPUS = 'C:\\Investigación\\Trabajo_2023\\Msc. Isabel Leal\\Búsqueda 1\\bibliometriascopusnew1csv.xlsx'
-RUTA_ARCHIVO_FILTRADO = 'df_scopus_filtrado.xlsx'
+RUTA_ARCHIVO_FILTRADO = 'C:\\Investigación\\Trabajo_2023\\Msc. Isabel Leal\\Búsqueda 1\\df_scopus_filtradofinal.xlsx'
 #COLUMNAS_BUSQUEDA = ['abstract', 'affiliations', 'author_keywords', 'keywords', 'title']
 COLUMNAS_BUSQUEDA = ['affiliations', 'author_keywords', 'keywords', 'title']
 # Cargar el archivo de Scopus
