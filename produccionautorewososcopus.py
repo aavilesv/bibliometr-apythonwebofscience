@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Cargar los datos
-df_wos = pd.read_excel('C:\\Investigación\\Trabajo_2023\\Codificaciones\\filtered_autoresfinales.xlsx')
+df_wos = pd.read_excel('C:\\Investigación\\Trabajo_2023\\Codificaciones\\filtered_autoresfinaless.xlsx')
 
 # Separar los autores en una lista
 df_wos['AutorList'] = df_wos['AutorFound'].str.split(';')
@@ -39,5 +39,5 @@ print(total_participations_by_author.head(10))
 # ... [tu código anterior]
 
 # Guardar "total_participations_by_author" en un archivo Excel
-output_path_participations = 'C:\\Investigación\\Trabajo_2023\\Codificaciones\\total_participaciones_unemi.xlsx'
-total_participations_by_author.to_frame(name='Total Participations').to_excel(output_path_participations)
+output_path_participations = 'C:\\Investigación\\Trabajo_2023\\Codificaciones\\total_participaciones_unemiifinal.xlsx'
+df_expanded.to_excel(output_path_participations)

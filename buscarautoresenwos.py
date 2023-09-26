@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 # Cargar los archivos
-df_wos = pd.read_excel('C:\\Investigación\\Trabajo_2023\\Codificaciones\\data.xlsx')
+df_wos = pd.read_excel('C:\\Investigación\\Trabajo_2023\\Codificaciones\\data_2023.xlsx')
 
 # Lista de afiliaciones para buscar
 affiliations_to_search = [
@@ -40,7 +40,7 @@ df_wos['AutorFound'] = df_wos['Addresses'].astype(str).apply(find_affiliation)
 df_filtered = df_wos.dropna(subset=['AutorFound'])
 
 # Guardar el DataFrame filtrado en un nuevo archivo
-output_path = 'C:\\Investigación\\Trabajo_2023\\Codificaciones\\filtered_autoresfinales.xlsx'
+output_path = 'C:\\Investigación\\Trabajo_2023\\Codificaciones\\filtered_autoresfinaless.xlsx'
 df_filtered.to_excel(output_path, index=False)
 
 print(f"Se guardó la información en {output_path}")
