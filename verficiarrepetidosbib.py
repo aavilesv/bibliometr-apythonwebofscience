@@ -1,7 +1,7 @@
 import bibtexparser
 
-archivo_bib = 'C:\\Investigación\\Trabajo_2023\\Msc. Isabel Leal\\Búsqueda 1\\bibliometriascopusfinales.bib'
-archivo_salida = 'C:\\Investigación\\Trabajo_2023\\Msc. Isabel Leal\\Búsqueda 1\\bibliometriascopusfinales2.bib'
+archivo_bib = 'C:\\Investigación\\Trabajo_2023\\Msc. Isabel Leal\\Búsqueda 1\\originalbibliometriascopus.bib'
+archivo_salida = 'C:\\Investigación\\Trabajo_2023\\Msc. Isabel Leal\\Búsqueda 1\\originalbibliometriascopusfinales.bib'
 
 with open(archivo_bib, 'r', encoding='utf-8') as archivo:
     bib_database = bibtexparser.load(archivo)
