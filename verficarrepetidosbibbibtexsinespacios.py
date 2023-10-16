@@ -18,6 +18,6 @@ def corregir_identificadores(archivo_bib):
         f.writelines(contenido)
 
 if __name__ == "__main__":
-    archivo_bib = 'C:\\Investigación\\Trabajo_2023\\Msc. Isabel Leal\\Búsqueda 1\\originalbibliometriascopus.bib'
+    archivo_bib = 'C:\\Users\\AAVILESV\\Downloads\\Dr. Patricio\\2023_2022scopus.bib'
     corregir_identificadores(archivo_bib)
     print("Identificadores corregidos en el archivo .bib.")

@@ -8,7 +8,7 @@ from pybtex.database import parse_file
 
 try:
 
-    archivo_bib = 'C:\\Investigación\\Trabajo_2023\\Msc. Isabel Leal\\Búsqueda 1\\originalbibliometriascopusfinales.bib'
+    archivo_bib = 'C:\\Users\\AAVILESV\\Downloads\\Dr. Patricio\\2023_2022scopusfinale.bib'
         # Parsear el archivo .bib
     bib_data = parse_file(archivo_bib)
     # Obtener las entradas de tipo "article" o "articulo"
@@ -25,12 +25,17 @@ try:
 
     limpiar_caracteres(archivo_bib)
     for clave, entrada in bib_data.entries.items():
-            if 'keywords' in entrada.fields and 'author_keywords' in entrada.fields:
-                
+    # Verificar si la entrada es de tipo "article"
+        if entrada.type == "article":
+        # Si 'keywords' existe pero 'author_keywords' no, crear 'author_keywords'
+            if 'keywords' in entrada.fields and 'author_keywords' not in entrada.fields:
+                entrada.fields['author_keywords'] = entrada.fields['keywords'].lower()
+            # Si ambos 'keywords' y 'author_keywords' existen, combinarlos
+            elif 'keywords' in entrada.fields and 'author_keywords' in entrada.fields:
                 keywords = entrada.fields['keywords']
                 keywords_plus = entrada.fields['author_keywords']
-                entrada.fields['author_keywords'] = keywords.lower()+"; "+keywords_plus.lower()
-                #del entrada.fields['Keywords']
+                entrada.fields['author_keywords'] = keywords.lower() + "; " + keywords_plus.lower()
+
         
 
     # Guarda los cambios en el archivo .bib
