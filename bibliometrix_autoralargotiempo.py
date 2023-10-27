@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Leer el archivo Excel
-df = pd.read_excel('C:\\Investigación\\Trabajo_2023\\Codificaciones\\Author_Production_Over_Time.xlsx')
+df = pd.read_excel('C:\\Users\\AAVILESV\\Downloads\\Author_Production_Over_Time.xlsx')
 # Imprimir los nombres de las columnas
 
 # Crear un gráfico de líneas para cada autor

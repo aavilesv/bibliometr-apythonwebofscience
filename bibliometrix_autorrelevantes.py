@@ -1,10 +1,12 @@
 import matplotlib.pyplot as plt
 
 # Datos
-authors = ["AL-RAHMI WM", "LOWENTHAL PR", "AGGARWAL A", "ALIJA S", "ALLEN KA", 
-           "CHAMORRO-ATALAYA O", "MALONEY S", "MORALES-ROMERO G", "SANTALLY MI", "ABDALLA ME"]
-articles = [7, 4, 3, 3, 3, 3, 3, 3, 3, 2]
-articles_fractionalized = [1.65, 1.67, 1.08, 0.92, 0.47, 0.45, 0.66, 0.43, 1.08, 0.33]
+# Datos
+authors = ["BOLLIGER DU", "STONE C", "AL-RAHMI WM", "ALYOUSSEF IY", "HOWARD W", 
+           "LEE J", "LOWENTHAL PR", "MAROCO J", "MARTIN F", "PARK S"]
+articles = [4, 4, 3, 3, 3, 3, 3, 3, 3, 3]
+articles_fractionalized = [1.83, 1.25, 0.56, 2.17, 1.08, 0.83, 1.08, 0.28, 1.33, 1.50]
+
 
 # Creación del gráfico
 fig, ax1 = plt.subplots(figsize=(15, 10))
