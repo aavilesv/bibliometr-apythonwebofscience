@@ -1,7 +1,7 @@
 import re
 
 # Ruta del archivo .bib
-archivo_bib = 'C:\\Investigación\\Trabajo_2023\\Msc. Jorge Vinueza\\nuevotrabajo\\800wosbibfinales.bib'
+archivo_bib ='C:\\Investigación\\Trabajo_2023\\Msc. Alberto León Batallas\\datanueva\\wos588salida.bib'
 
 # Leer el archivo .bib línea por línea
 with open(archivo_bib, 'r', encoding='utf-8') as f:

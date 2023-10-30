@@ -8,7 +8,7 @@ from pybtex.database import parse_file
 
 try:
 
-    archivo_bib = 'C:\\Users\\AAVILESV\\Downloads\\Dr. Patricio\\2023_2022scopusfinale.bib'
+    archivo_bib = 'C:\\Investigación\\Trabajo_2023\\Msc. Alberto León Batallas\\datanueva\\wos588salida.bib'
         # Parsear el archivo .bib
     bib_data = parse_file(archivo_bib)
     # Obtener las entradas de tipo "article" o "articulo"
@@ -24,6 +24,21 @@ try:
             f.write(contenido)
 
     limpiar_caracteres(archivo_bib)
+    #web of science
+    for clave, entrada in bib_data.entries.items():
+    # Verificar si la entrada es de tipo "article"
+        if entrada.type == "article":
+        # Si 'keywords' existe pero 'author_keywords' no, crear 'author_keywords'
+            if 'keywords' in entrada.fields and 'keywords-plus' not in entrada.fields:
+                entrada.fields['keywords-plus'] = entrada.fields['keywords'].lower()
+            # Si ambos 'keywords' y 'author_keywords' existen, combinarlos
+            elif 'keywords' in entrada.fields and 'keywords-plus' in entrada.fields:
+                keywords = entrada.fields['keywords']
+                keywords_plus = entrada.fields['keywords-plus']
+                entrada.fields['keywords-plus'] = keywords.lower() + "; " + keywords_plus.lower()
+
+        '''
+        scopus
     for clave, entrada in bib_data.entries.items():
     # Verificar si la entrada es de tipo "article"
         if entrada.type == "article":
@@ -34,9 +49,7 @@ try:
             elif 'keywords' in entrada.fields and 'author_keywords' in entrada.fields:
                 keywords = entrada.fields['keywords']
                 keywords_plus = entrada.fields['author_keywords']
-                entrada.fields['author_keywords'] = keywords.lower() + "; " + keywords_plus.lower()
-
-        
+                entrada.fields['author_keywords'] = keywords.lower() + "; " + keywords_plus.lower()'''
 
     # Guarda los cambios en el archivo .bib
     #bib_data.to_file(archivo_bib, bib_format='bibtex')
