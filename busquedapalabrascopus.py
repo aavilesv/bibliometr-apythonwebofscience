@@ -2,22 +2,22 @@
 import pandas as pd
 
 # Constantes
-RUTA_ARCHIVO_SCOPUS = 'C:\\Investigación\\Trabajo_2023\\Msc. Isabel Leal\\Búsqueda 1\\bibliometriascopusnew1csv.xlsx'
-RUTA_ARCHIVO_FILTRADO = 'C:\\Investigación\\Trabajo_2023\\Msc. Isabel Leal\\Búsqueda 1\\df_scopus_filtradofinal.xlsx'
+RUTA_ARCHIVO_SCOPUS = 'C:\\Investigación\\Trabajo_2023\\Msc. Jorge Vinueza\\1908_scopus.csv'
+RUTA_ARCHIVO_FILTRADO = 'C:\\Investigación\\Trabajo_2023\\Msc. Jorge Vinueza\\df_scopus_filtradofinal.xlsx'
 #COLUMNAS_BUSQUEDA = ['abstract', 'affiliations', 'author_keywords', 'keywords', 'title']
 COLUMNAS_BUSQUEDA = ['affiliations', 'author_keywords', 'keywords', 'title']
 # Cargar el archivo de Scopus
-df_scopus = pd.read_excel(RUTA_ARCHIVO_SCOPUS)
+df_scopus = pd.read_csv(RUTA_ARCHIVO_SCOPUS)
 
 # Filtrar las columnas que realmente existen en el DataFrame
 columnas_existentes = [col for col in COLUMNAS_BUSQUEDA if col in df_scopus.columns]
 
 # Palabras clave para buscar en Scopus
 palabras_scopus = [
-    'bibliometrics', 'Bibliometric', 'Scopus', 'Visual analysis', 'Systematic literature review',
+    'bibliometrics', 'Bibliometric', 'Scopus','wos', 'web of science', 'Visual analysis', 'Systematic literature review',
     'bibliometrix', 'biblioshby', 'Citation analysis', 'Content analysis', 'Publication trend',
     'Scientometrics', 'Informetrics', 'Heuristic evaluation', 'Heuristic analysis', 'Bibliometric mapping',
-    'Co-citation analysis', 'Authorship pattern', 'heuristic method', 'heuristic approach', 'heuristic technique'
+    'Co-citation analysis'
 ]
 
 

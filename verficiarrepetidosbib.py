@@ -1,7 +1,7 @@
 import bibtexparser
 
-archivo_bib = 'C:\\Investigación\\Trabajo_2023\\Master Miguel Yuqui\\wosarticle466.bib'
-archivo_salida = 'C:\\Investigación\\Trabajo_2023\\Master Miguel Yuqui\\wosarticle466salida.bib'
+archivo_bib =  'G:\\Mi unidad\\2024\\Msc. Jorge Vinueza\\1908scopus.bib'
+archivo_salida = 'G:\\Mi unidad\\2024\\Msc. Jorge Vinueza\\1908scopusalid.bib'
 
 with open(archivo_bib, 'r', encoding='utf-8') as archivo:
     bib_database = bibtexparser.load(archivo)

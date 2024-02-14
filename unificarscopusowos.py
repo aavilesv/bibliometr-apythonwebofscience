@@ -2,7 +2,7 @@ import pandas as pd
 import re
 # Cargar los archivos
 df_scopus = pd.read_csv('C:\\Investigación\\Trabajo_2023\\Codificaciones\\batallasleon843scopuscsv.csv')
-df_wos = pd.read_excel('C:\\Investigación\\Trabajo_2023\\Codificaciones\\batallasleonwos580.xlsx')
+df_wos = pd.read_excel('G:\\Mi unidad\\2024\\Msc. Jorge Vinueza\\_1908scopusalid.xlsx')
 # Función para limpiar texto: convertir a mayúsculas, eliminar caracteres especiales y espacios adicionales
 
 # Seleccionar las columnas relevantes
