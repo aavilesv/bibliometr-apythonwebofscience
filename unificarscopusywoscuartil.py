@@ -1,39 +1,21 @@
 import pandas as pd
-import matplotlib.pyplot as plt
+# Vamos a definir una función que pueda ser utilizada para buscar y normalizar ISSNs en un DataFrame
 
-# Rutas a los archivos de Excel
-archivo_excel_scopus = 'G:\\Mi unidad\\2024\\Msc. Jorge Vinueza\\_1908scopusalid.xlsx'
-archivo_excel_wos = 'G:\\Mi unidad\\2024\\Msc. Jorge Vinueza\\_final833savedrecsalid.xlsx'
+def normalize_issn(issn_series):
+    """
+    Normaliza los ISSNs en una serie de pandas, eliminando ceros iniciales.
+    
+    :param issn_series: Serie de pandas con ISSNs
+    :return: Serie de pandas con ISSNs normalizados
+    """
+    return issn_series.str.lstrip('0')
 
-# Cargar los archivos de Excel
-df_scopus = pd.read_excel(archivo_excel_scopus)
-df_wos = pd.read_excel(archivo_excel_wos)
+# Crear un DataFrame de ejemplo
+df_example = pd.DataFrame({
+    'issn': ['13026488', '013026488', '00001123', '11234567', '013026488']
+})
 
-# Extraer y limpiar el número de citas para Scopus
-df_scopus['citations_scopus'] = df_scopus['note'].str.extract(r'Cited by: (\d+)')
-df_scopus['citations_scopus'] = pd.to_numeric(df_scopus['citations_scopus'], errors='coerce').fillna(0).astype(int)
+# Aplicar la función de normalización
+df_example['normalized_issn'] = normalize_issn(df_example['issn'])
 
-# Asegurarse de que el número de citas es un entero para Web of Science
-df_wos['citations_wos'] = pd.to_numeric(df_wos['number-of-cited-references'], errors='coerce').fillna(0).astype(int)
-
-# Limpiar el campo 'issn' quitando el guion
-df_scopus['issn'] = df_scopus['issn'].str.replace('-', '', regex=False)
-df_wos['issn'] = df_wos['issn'].str.replace('-', '', regex=False)
-
-# Seleccionar las columnas relevantes para la comparación y mantener los campos de citas separados
-columns_to_select = ['title', 'abstract', 'journal', 'year', 'doi', 'language', 'issn']
-columns_to_compare = ['doi']
-
-# Agregar los campos de citas a los DataFrames
-df_scopus_selected = df_scopus[columns_to_select + ['citations_scopus']]
-df_wos_selected = df_wos[columns_to_select + ['citations_wos']]
-
-# Unir ambos DataFrames
-combined_df = pd.concat([df_scopus_selected, df_wos_selected], ignore_index=True)
-df_undido = combined_df.sort_values(by='title')
-
-# Guardar el DataFrame consolidado en un nuevo archivo Excel
-output_file = 'G:\\Mi unidad\\2024\\Msc. Jorge Vinueza\\consolidadovundido.xlsx'
-df_undido.to_excel(output_file, index=False)
-
-print(f"El archivo consolidado ha sido guardado como {output_file}.")
+df_example

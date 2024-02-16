@@ -9,7 +9,7 @@ from pybtex.database import parse_file
 try:
 
 
-    archivo_bib = 'C:\\Investigación\\Trabajo_2023\\Master Miguel Yuqui\\scopussalida1070.bib '
+    archivo_bib = 'G:\\Mi unidad\\2024\\Msc. Jorge Vinueza\\final833savedrecsalid.bib'
     # Parsear el archivo .bib
     bib_data = parse_file(archivo_bib)
     # Obtener las entradas de tipo "article" o "articulo"
@@ -25,7 +25,7 @@ try:
             f.write(contenido)
 
     limpiar_caracteres(archivo_bib)
-    '''
+    
     #web of science
     for clave, entrada in bib_data.entries.items():
     # Verificar si la entrada es de tipo "article"
@@ -39,9 +39,9 @@ try:
                 keywords_plus = entrada.fields['keywords-plus']
                 entrada.fields['keywords-plus'] = keywords.lower() + "; " + keywords_plus.lower()
 
-      
-        scopus
     '''
+        scopus
+    
     for clave, entrada in bib_data.entries.items():
     # Verificar si la entrada es de tipo "article"
         if entrada.type == "article":
@@ -53,7 +53,7 @@ try:
                 keywords = entrada.fields['keywords']
                 keywords_plus = entrada.fields['author_keywords']
                 entrada.fields['author_keywords'] = keywords.lower() + "; " + keywords_plus.lower()
-
+    '''
     # Guarda los cambios en el archivo .bib
     #bib_data.to_file(archivo_bib, bib_format='bibtex')
     with open(archivo_bib, 'w', encoding='utf-8') as archivo:

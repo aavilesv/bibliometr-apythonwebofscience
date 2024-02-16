@@ -39,6 +39,6 @@ def procesar_bib(archivo_bib):
         print(f"Error al procesar el archivo {archivo_bib}: {e}")
 
 # Usar las funciones definidas
-archivo_bib_path = 'C:\\Investigación\\Trabajo_2023\\Master Miguel Yuqui\\scopussalid.bib'
+archivo_bib_path = 'G:\\Mi unidad\\2024\\Msc. Jorge Vinueza\\1908scopusalid.bib'
 limpiar_caracteres(archivo_bib_path)
 procesar_bib(archivo_bib_path)
