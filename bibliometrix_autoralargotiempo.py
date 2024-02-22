@@ -2,7 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Leer el archivo Excel
-df = pd.read_excel('C:\\Users\\AAVILESV\\Downloads\\Author_Production_Over_Time.xlsx')
+df = pd.read_excel('G:\\Mi unidad\\2024\\Msc. Jorge Vinueza\\informaciondata\\_wos_Author_Production_Over_Time.xlsx')
+
 # Imprimir los nombres de las columnas
 
 # Crear un gráfico de líneas para cada autor
@@ -11,10 +12,10 @@ plt.figure(figsize=(15, 8))
 
 for author in authors:
     subset = df[df['Author'] == author]
-    plt.plot(subset['year'], subset['freq'], label=author, marker='o')
+    plt.plot(subset['year'], subset['TC'], label=author, marker='o')
 
 # Preparar los datos
-df_pivot = df.pivot(index='year', columns='Author', values='freq').fillna(0)
+df_pivot = df.pivot(index='year', columns='Author', values='TC').fillna(0)
 
 # Gráfico de barras apiladas
 ax = df_pivot.plot(kind='bar', stacked=True, figsize=(15, 7), cmap="tab20c")

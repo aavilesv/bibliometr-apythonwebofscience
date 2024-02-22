@@ -1,11 +1,13 @@
 import matplotlib.pyplot as plt
+import pandas as pd
+
+df = pd.read_excel("G:\\Mi unidad\\2024\\Msc. Jorge Vinueza\\informaciondata\\wos_Most_Local_Cited_Authors.xlsx")
+
 
 # Datos
-# Datos
-authors = ["BOLLIGER DU", "STONE C", "AL-RAHMI WM", "ALYOUSSEF IY", "HOWARD W", 
-           "LEE J", "LOWENTHAL PR", "MAROCO J", "MARTIN F", "PARK S"]
-articles = [4, 4, 3, 3, 3, 3, 3, 3, 3, 3]
-articles_fractionalized = [1.83, 1.25, 0.56, 2.17, 1.08, 0.83, 1.08, 0.28, 1.33, 1.50]
+authors =  df['Authors']
+articles =  df['Articles']
+articles_fractionalized =df['Articles_Fractionalized']
 
 
 # Creación del gráfico

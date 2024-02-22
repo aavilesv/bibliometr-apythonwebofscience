@@ -3,7 +3,8 @@ import matplotlib.pyplot as plt
 import numpy as np  # Añade la importación de numpy para generar colores únicos
 
 # Leer el archivo Excel
-ruta_archivo = 'C:\\Investigación\\Trabajo_2023\\Codificaciones\\Author_Impact.xlsx'
+ruta_archivo = 'G:\\Mi unidad\\2024\\Msc. Jorge Vinueza\\informaciondata\\scopus_Author_Impact.xlsx'
+
 df = pd.read_excel(ruta_archivo)
 
 # Asegurarse de que las columnas estén en el formato correcto
